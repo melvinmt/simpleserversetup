@@ -11,8 +11,8 @@ Vagrant.configure("2") do |config|
     config.berkshelf.enabled = true
 
     # New hotness (Lua package names, PHP 5.5, nginx 1.4, more chocolate-chip cookies and milk)
-    config.vm.box = "trusty64"
-    config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
+    config.vm.box = "precise64"
+    config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
 
     # The hostname the machine should have. If not given, Vagrant won't manage the hostname.
     # config.vm.hostname "vagrant-trusty64"
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
     #config.vm.network :forwarded_port, guest: 1935, host: 1935, auto_correct: true
 
     # share this current folder with the virtual box
-    config.vm.synced_folder "../", "/home/vagrant"
+    config.vm.synced_folder "../", "/home/vagrant/git"
 
     # Also sync the www directory
     # config.vm.synced_folder "www", "/var/www/", :nfs => true
